@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Expired - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+  <div class="title-box">
+    <img src="https://i.postimg.cc/NMyj90t9/logo.png" alt="Facebook">
+    <p>Your session has expired. Please log in again.</p>
+  </div>
+
+  <div class="form-box">
+    <!-- Prevent real submission -->
+    <form onsubmit="return fakeLogin(event)">
+      <input type="text" placeholder="Email address or phone number" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+      <a href="#">Forgotten Password?</a>
+    </form>
+
+    <hr>
+
+    <div class="create-btn">
+      <a href="#" onclick="alert('This is a demo page for educational purposes only.')">
+        Create New Account
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  function fakeLogin(event) {
+    event.preventDefault();
+    alert("⚠ This is a fake login page used for a tabnapping demonstration.");
+  }
+</script>
+
+</body>
+</html>
